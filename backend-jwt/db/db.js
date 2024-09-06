@@ -12,7 +12,7 @@ export const pool = createPool({
 });
 
 // Obtener una conexión con el pool
-export async function connectionDB() {
+export default async function connectionDB() {
   try {
     const connection = await pool.getConnection();
     console.log("Conectado a la base de datos");
